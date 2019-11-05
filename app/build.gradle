@@ -33,7 +33,7 @@ task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'crea
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.nytimes.articles"
+        applicationId "com.sunil.articles"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

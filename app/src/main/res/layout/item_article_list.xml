@@ -6,7 +6,7 @@
 
         <variable
             name="article"
-            type="com.nytimes.articles.data.local.entity.RowsItem" />
+            type="com.sunil.articles.data.local.entity.RowsItem" />
     </data>
 
 

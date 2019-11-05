@@ -8,7 +8,7 @@
 
         <variable
             name="resource"
-            type="com.nytimes.articles.data.remote.Resource" />
+            type="com.sunil.articles.data.remote.Resource" />
 
     </data>
 
