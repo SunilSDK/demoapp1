@@ -21,8 +21,13 @@ public class MainActivity extends BaseActivity<ActivityMain1Binding> {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentUtils.replaceFragment(this, ArticleListFragment.newInstance(), R.id.fragContainer, false, TRANSITION_NONE);
+        if (savedInstanceState == null) {
+
+            FragmentUtils.replaceFragment(this, ArticleListFragment.newInstance(), R.id.fragContainer, false, TRANSITION_NONE);
+        } else {
+
+        }
+
+
     }
-
-
 }
