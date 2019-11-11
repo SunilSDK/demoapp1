@@ -48,6 +48,9 @@ public class AppModule {
         return retrofit.create(ApiService.class);
     }
 
+
+
+
     @Provides
     @Singleton
     ArticleDatabase provideArticleDatabase(Application application) {

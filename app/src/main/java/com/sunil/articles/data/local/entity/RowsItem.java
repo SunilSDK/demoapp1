@@ -35,8 +35,15 @@ public class RowsItem{
 	}
 	@BindingAdapter({"bind:imageUrl"})
 	public static void loadImage(ImageView view, String imageUrl) {
+		String temp;
+		if(imageUrl==null){
+			temp="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg";
+		}else
+		{
+			temp=imageUrl;
+		}
 		Picasso.with(view.getContext())
-				.load(imageUrl)
+				.load(temp)
 				.placeholder(R.drawable.ic_article)
 				.into(view);
 	}

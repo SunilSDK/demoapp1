@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModel;
 
 
 import com.sunil.articles.data.local.entity.RowsItem;
+import com.sunil.articles.data.remote.ApiService;
 import com.sunil.articles.data.remote.Resource;
 import com.sunil.articles.data.remote.repository.ArticleRepository;
 
@@ -16,8 +17,9 @@ public class ArticleListViewModel extends ViewModel {
     private final LiveData<Resource<List<RowsItem>>> popularArticles;
 
     @Inject
-    public ArticleListViewModel(ArticleRepository articleRepository) {
-        popularArticles = articleRepository.loadPopularArticles();
+    public ArticleListViewModel(ArticleRepository articleRepository,ApiService apiService) {
+
+        popularArticles = articleRepository.loadPopularArticles(apiService);
     }
 
     public LiveData<Resource<List<RowsItem>>> getPopularArticles() {

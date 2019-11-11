@@ -26,16 +26,16 @@ import retrofit2.Call;
 public class ArticleRepository {
 
     private final RowItemDao articleDao;
-    private final ApiService apiService;
+//    private final ApiService apiService;
 
     @Inject
-    ArticleRepository(RowItemDao dao, ApiService service) {
+    ArticleRepository(RowItemDao dao) {
         this.articleDao = dao;
-        this.apiService = service;
+  //      this.apiService = service;
     }
 
 
-    public LiveData<Resource<List<RowsItem>>> loadPopularArticles() {
+    public LiveData<Resource<List<RowsItem>>> loadPopularArticles(ApiService apiService) {
         return new NetworkBoundResource<List<RowsItem>, PostResponse>() {
 
             @Override
